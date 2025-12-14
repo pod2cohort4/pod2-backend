@@ -322,7 +322,8 @@ jobs:
         cd kubernetes-manifest-file
 
         (Get-Content bank-project/backendapi.yaml) `
-          -replace 'image:.*bank-backendapi:.*', 'image: ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}' `
+          -replace 'image:\s*026764164788\.dkr\.ecr\.us-east-1\.amazonaws\.com/bank-backendapi.*',
+                   'image: 026764164788.dkr.ecr.us-east-1.amazonaws.com/bank-backendapi:${{ env.IMAGE_TAG }}' `
           | Set-Content bank-project/backendapi.yaml
 
         Write-Host "Updated manifest:"
@@ -334,3 +335,6 @@ jobs:
         git add bank-project/backendapi.yaml
         git commit -m "Update backendapi image to version ${{ env.IMAGE_TAG }}"
         git push origin main
+
+
+
