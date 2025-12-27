@@ -20,7 +20,7 @@ import io.swagger.v3.oas.annotations.Operation;
 
 @RestController
 @RequestMapping("api/bank/account")
-@CrossOrigin(origins = "https://bank.cohort4pod7cloud.online")
+@CrossOrigin(origins = "https://bank.pod2-c4.online")
 public class BankAccountController {
 
 	@Autowired

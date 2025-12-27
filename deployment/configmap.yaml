@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: bank-backend-config
 data:
-  DB_HOST: "production-mysql-db.c0puaoesig6x.us-east-1.rds.amazonaws.com"
+  DB_HOST: "production-mysql-db.c2ruso8ouude.us-east-1.rds.amazonaws.com"
   DB_PORT: "3306"
   DB_NAME: "production_db"
